@@ -1,0 +1,163 @@
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    position: relative;
+    background-color:rgb(12, 102, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+}
+
+
+
+.calculatore{
+    width:500px;
+    height: 550px;
+    padding: 10px 15px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction:column;
+    border-radius: 10px;
+    border:1px solid rgba(240, 255, 255, 0.708);
+    box-shadow: 1px 1px 15px rgba(240, 255, 255, 0.708);
+}
+.input{
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    color: white;
+    border:1px solid rgba(240, 255, 255, 0.708);
+    margin:10px 5px 30px;
+    border-radius: 8px;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px;
+}
+input:focus-visible{
+    outline: 0px!important;
+    box-shadow: 1px 1px 15px rgba(240, 255, 255, 0.708);
+}
+.numbers,
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction:column; 
+    flex-wrap: nowrap;  
+}
+.operator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction:row; 
+    flex-wrap: nowrap;
+}
+.remove,
+.numbers .numPart1 .number,
+.numbers .numPart2 .number,
+.numbers .numPart3 .number,
+.operator button{
+width: 100px;
+height: 60px;
+border-radius: 4px;
+text-align: center;
+margin: 10px 10px;
+font-size: 30px;
+font-weight: 300;
+font-family: sans-serif;
+transition: 0.5s;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Old versions of Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; 
+    
+}
+.operator button{
+    background-color: rgb(212, 222, 231);
+    border: 0.7px solid rgb(0, 0, 0); 
+    color: rgb(100, 102, 103);
+}
+.numbers .numPart3 .remove:hover,
+.numbers .numPart1 .number:hover,
+.numbers .numPart2 .number:hover,
+.numbers .numPart3 .number:hover,
+.operator button:hover{
+    transform: scale(1.07);
+}
+.numbers .numPart1 .remove:focus,
+.numbers .numPart1 .number:focus,
+.numbers .numPart2 .number:focus,
+.numbers .numPart3 .number:focus,
+.numbers .numPart3 .remove:active,
+.numbers .numPart1 .number:active,
+.numbers .numPart2 .number:active,
+.numbers .numPart3 .number:active,
+.numbers .numPart1 .number:focus-visible,
+.numbers .numPart2 .number:focus-visible,
+.numbers .numPart3 .number:focus-visible,
+.operator button:focus,
+.operator button:focus-visible{
+    font-weight: 500;
+    color: #000;
+    outline: none!important;
+}
+.numbers .numPart1,
+.numbers .numPart2,
+.numbers .numPart3,
+.number_equals_box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction:row; 
+    flex-wrap: nowrap; 
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.numbers .numPart1 .number,
+.numbers .numPart2 .number,
+.numbers .numPart3 .remove,
+.numbers .numPart3 .number
+{  background-color: rgb(182, 186, 190);
+    border: 0.7px solid rgb(81, 80, 80); 
+    color: rgb(58, 60, 60);
+}
+
+.eqals{
+    background-color:  rgb(206 94 0);
+    width: 100%;
+    height: 93%;
+    height: -webkit-fill-available;
+    margin:10px 10px;
+    border-radius: 4px;
+    font-size: 30px;
+    font-weight: 300;
+    transition: 0.5s;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+border: 0.5px solid  rgb(206 94 0);
+}
+.eqals:hover{
+    opacity: 0.8;
+    color: #fff;
+    font-weight: 600;
+}
